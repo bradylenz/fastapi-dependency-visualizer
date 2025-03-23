@@ -1,0 +1,24 @@
+[project]
+name = "fastapi-dependency-visualizer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.11",
+    "graphviz>=0.20.3",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.11.2",
+]
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = "graphviz"
+ignore_missing_imports = true
+
